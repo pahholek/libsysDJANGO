@@ -4,14 +4,14 @@ import datetime
 # Create your models here.
 
 class user(models.Model):
-    id = models.DecimalField(max_digits=10, decimal_places=0, primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=150)
     surname = models.CharField(max_length=150)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
     email = models.EmailField()
 
 class book(models.Model):
-    id = models.DecimalField(max_digits=10, decimal_places=0, primary_key=True)
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=300)
     author = models.CharField(max_length=300)
     publisher = models.CharField(max_length=300, blank=True, null=True)    
