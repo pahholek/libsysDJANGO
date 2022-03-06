@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Book View</h1>
+<table>
+    <tr>
+        <th>Tytuł:</th>
+        <td>{{ title }}</td>
+    </tr>
+    <tr>
+        <th>Autor:</th>
+        <td>{{ author }}</td>
+    </tr>
+    <tr>
+        <th>Wydawca:</th> 
+        <td>{{ publisher }}</td>
+    </tr>
+    <tr>
+        <th>ISBN:</th> 
+        <td>{{ isbn }}</td>
+    </tr>
+    <tr>
+        <th>Opis:</th> 
+        <td>{{ description }}</td>
+    </tr>
+    <tr>
+        <th>Data Wprowadzenia:</th> 
+        <td>{{ insert_date }}</td>
+    </tr>
+    <tr>
+        <th>Wypożyczono:</th> 
+        <td>{{ borrowed }}</td>
+    </tr>    
+</table>
+
+{% endblock %}
