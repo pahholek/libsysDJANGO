@@ -30,6 +30,6 @@ urlpatterns = [
     path('wyszukajksiazka', search_book_view, name='wyszukajk'),
     path('listaksiazka', book_list_view, name='listaksiazka'),
     path('listaczytelnik', reader_list_view, name='listaczytelnik'),
-    path('podglangksiazka', book_view, name='podglangksiazka'), 
+    path('podglangksiazka/<int:number>', book_view, name='podglangksiazka'), 
     path('admin/', admin.site.urls),    
 ]

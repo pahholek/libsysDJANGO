@@ -3,32 +3,46 @@
 <h1>Book View</h1>
 <table>
     <tr>
+        <th>ID:</th>
+        <td>{{ object.id }}</td>
+    </tr>
+    <tr>
         <th>Tytuł:</th>
-        <td>{{ title }}</td>
+        <td>{{ object.title }}</td>
     </tr>
     <tr>
         <th>Autor:</th>
-        <td>{{ author }}</td>
+        <td>{{ object.author }}</td>
     </tr>
     <tr>
         <th>Wydawca:</th> 
-        <td>{{ publisher }}</td>
+        <td>{{ object.publisher }}</td>
     </tr>
     <tr>
         <th>ISBN:</th> 
-        <td>{{ isbn }}</td>
+        <td>{{ object.ISBN }}</td>
     </tr>
     <tr>
         <th>Opis:</th> 
-        <td>{{ description }}</td>
+        <td>{{ object.description }}</td>
     </tr>
     <tr>
         <th>Data Wprowadzenia:</th> 
-        <td>{{ insert_date }}</td>
+        <td>{{ object.insert_date }}</td>
     </tr>
     <tr>
         <th>Wypożyczono:</th> 
-        <td>{{ borrowed }}</td>
+        <td>{{ object.borrowed }}</td>
+    </tr>
+    {% if object.borrowed %}
+    <tr>
+        <th>Wypożyczono:</th> 
+        <td>{{ object.borrowed }}</td>
+    </tr>
+    {% endif %}    
+    <tr>
+        <th>Tom:</th> 
+        <td>{{ object.volume }}</td>
     </tr>    
 </table>
 
