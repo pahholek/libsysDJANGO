@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from books.models import book
+from books.forms import BookForm
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -10,7 +11,13 @@ def home_view(request, *args, **kwargs):
 
 def add_book_view(request, *args, **kwargs):
     if request.user.is_superuser:
-        return render(request, "add_book.html", {})
+        form = BookForm(request.POST or None)
+        if form.is_valid():
+            form.save()
+        context = {
+            'form': form
+        }
+        return render(request, "add_book.html", context)
     else:
         return render(request, "no_permissions.html", {})
         
