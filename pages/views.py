@@ -8,10 +8,12 @@ def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 
 
-
 def add_book_view(request, *args, **kwargs):
-    return render(request, "add_book.html", {})
-
+    if request.user.is_superuser:
+        return render(request, "add_book.html", {})
+    else:
+        return render(request, "no_permissions.html", {})
+        
 
 def add_reader_view(request, *args, **kwargs):
     return render(request, "add_reader.html", {})

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'no_perm.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<div class="center_content">
+<h1>Error: Brak Dostępu 403</h1>
+<h2>Spróbój zalogować sie w panelu admina</h2>
+<div class="buttons">
+    <table>
+        <td>
+            <form action="/">
+                <input type="submit" value="Srona głowna" class="button-custom"/>
+            </form>
+        </td>
+        <td>
+            <form action="admin/">
+                <input type="submit" value="Admin" class="button-custom"/>
+            </form>
+        </td>
+    </table>
+</div>
+</div>
+{% endblock %}

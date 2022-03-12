@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Book View</h1>
-<table>
+{% load static %}
+<link rel="stylesheet" href="{% static 'book_detail.css' %}">
+<table class="container">
     <tr>
         <th>ID:</th>
         <td>{{ object.id }}</td>
@@ -38,6 +39,10 @@
     <tr>
         <th>Wypożyczono:</th> 
         <td>{{ object.borrowed }}</td>
+    </tr>
+    <tr>
+        <th>Data Wypożyczenia</th>
+        <td>{{ object.borrowed_date }}</td>
     </tr>
     {% endif %}    
     <tr>
