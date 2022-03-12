@@ -6,4 +6,4 @@ But if you still want to use it please change
 ```python
 secret-key = <key>
 ```
-to secure secret key
+to secure secret key.
