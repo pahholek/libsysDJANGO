@@ -14,6 +14,7 @@ def add_book_view(request, *args, **kwargs):
         form = BookForm(request.POST or None)
         if form.is_valid():
             form.save()
+            form = BookForm()
         context = {
             'form': form
         }
