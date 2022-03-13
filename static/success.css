@@ -1,0 +1,52 @@
+body {
+    background-color: #89d8d3;
+    background-image: linear-gradient(315deg, #7aa7a4 0%, #279fb4);
+}
+
+.center_content>h1 {
+    color: rgb(0, 212, 0);
+    font-size: 3.5em;
+    font-weight: bold;
+    text-shadow: 0 0 3px #09af6f, 0 0 5px #05162c;
+}
+
+.center_content>h2 {
+    color: rgb(28, 211, 171);
+    font-size: 1.5em;
+    font-weight: 500;
+    text-shadow: 0 0 3px #09af6f, 0 0 11px #05162c;
+}
+
+.center_content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.buttons{
+    display: grid;
+}
+
+.buttons>table {
+    margin-top: 30px;
+}
+
+.button-custom {
+    background-color: #4CAF50;
+    font-size: 20px;
+    padding: 14px 40px;
+    border-radius: 8px;
+    box-shadow: 5px 5px;
+}
+.button-custom:hover {
+    background-color: #248b8294;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 3px 3px;
+}
+.button-custom {
+    transition-duration: 0.7s;
+  }

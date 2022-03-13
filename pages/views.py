@@ -1,6 +1,6 @@
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from books.models import book
 from books.forms import BookForm
 
@@ -14,14 +14,17 @@ def add_book_view(request, *args, **kwargs):
         form = BookForm(request.POST or None)
         if form.is_valid():
             form.save()
-            form = BookForm()
+            return HttpResponseRedirect('form/success')
         context = {
-            'form': form
+            'form': form,
         }
+
         return render(request, "add_book.html", context)
     else:
         return render(request, "no_permissions.html", {})
         
+def success_view(request, *args, **kwargs):
+    return render(request, "success.html", {})
 
 def add_reader_view(request, *args, **kwargs):
     return render(request, "add_reader.html", {})

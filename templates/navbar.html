@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'nav.css' %}">
+<script  src="{% static 'nav.js' %}"></script>
 <div id='container'>
     <nav id='menu'>
         <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
@@ -7,13 +10,13 @@
           <li><a href='/dodajczytelnika'>Dodaj Czytelnika</a></li>
           <li><a href='/wypozycz'>Wypożycz</a></li>
           <li><a href='http://'>Zwróć</a></li>
-          <li><a class='dropdown-arrow' href='http://'>Wyszukaj  🔎</a>
+          <li><a class='dropdown-arrow' href='#' class='dro'>Wyszukaj  🔎</a>
             <ul class='sub-menus'>
               <li><a href='http://'>Książkę</a></li>
               <li><a href='http://'>Czytelnik</a></li>
             </ul>
           </li>
-          <li><a class='dropdown-arrow' href='http://'>Wyświetl Listę 🕮</a>
+          <li><a class='dropdown-arrow' href='#'>Wyświetl Listę 🕮</a>
             <ul class='sub-menus'>
               <li><a href='http://'>Książek</a></li>
               <li><a href='http://'>Czytelników</a></li>

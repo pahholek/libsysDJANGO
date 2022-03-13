@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<form action='.' metod='POST'>{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save" />
+{% load static %}
+<link rel="stylesheet" href="{% static 'form.css' %}">
+<form method='POST'>{% csrf_token %}
+    <div class="form-container">
+        {{ form }}
+        <input type="submit" value="Save" class="submit" />
+    </div>
 </form>
 
 {% endblock %}

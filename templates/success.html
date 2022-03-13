@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'success.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<div class="center_content">
+<h1>Sukces</h1>
+<h2>Zapisano dane</h2>
+<div class="buttons">
+    <table>
+        <td>
+            <form action="/">
+                <input type="submit" value="Srona głowna" class="button-custom"/>
+            </form>
+        </td>
+        <td>
+            <form action="dodajwolumin/">
+                <input type="submit" value="Dodaj kolejny" class="button-custom"/>
+            </form>
+        </td>
+    </table>
+</div>
+</div>
+{% endblock %}

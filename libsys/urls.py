@@ -31,5 +31,6 @@ urlpatterns = [
     path('listaksiazka', book_list_view, name='listaksiazka'),
     path('listaczytelnik', reader_list_view, name='listaczytelnik'),
     path('podglangksiazka/<int:number>', book_view, name='podglangksiazka'), 
+    path('form/success', success_view, name='form_success'),
     path('admin/', admin.site.urls),
 ]

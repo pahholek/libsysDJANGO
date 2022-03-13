@@ -4,44 +4,45 @@ from .models import book
 
 class BookForm(forms.ModelForm):
     title = forms.CharField(
-        label=('Tytuł'),
-        widget=forms.TextInput(attrs={"placeholder": "Wpisz Tytuł"}),
+        label=(''),
+        widget=forms.TextInput(attrs={"placeholder": "Tytuł: " ,'class':'form_input'}),
         required=True,
     )
 
     author = forms.CharField(
-    label=('Autor'),
-    widget=forms.TextInput(attrs={"placeholder": "Podaj Autora"}),
+    label=(''),
+    widget=forms.TextInput(attrs={"placeholder": "Autor: ", 'class':'form_input'}),
     required=True,
     )
 
     publisher = forms.CharField(
-        label=('Wydawca'),
-        widget=forms.TextInput(attrs={"placeholder": "Podaj Wydawce"}),
+
+        label=(''),
+        widget=forms.TextInput(attrs={"placeholder": "Wydawca: ",'class':'form_input'}),
         required=False,
     )
 
     ISBN = forms.CharField(
-        label=('ISBN'),
-        widget=forms.TextInput(attrs={"placeholder": "Podaj ISBN"}),
+        label=(''),
+        widget=forms.TextInput(attrs={"placeholder": "ISBN: " ,'class':'form_input'}),
         required=False,
     )
     
     description = forms.CharField(
-        label=('Opis'),
-        widget=forms.Textarea(attrs={"placeholder": "Podaj Opis"}),
+        label=(''),
+        widget=forms.Textarea(attrs={"placeholder": "Opis: " ,'class':'form_input'}),
         required=False,
     )
 
     insert_date = forms.DateField(
         initial=datetime.date.today,
-        label=('Data Wprowadzenia'),
+        label=(''),
         required=False,
     )
 
     volume = forms.IntegerField(
-        label=('Numer Tomu'),
-        widget=forms.NumberInput(attrs={"placeholder": "Podaj Number Tomu"}),
+        label=(''),
+        widget=forms.NumberInput(attrs={"placeholder": "Numer Tomu: "}),
         required=False,
     )
     class Meta:
