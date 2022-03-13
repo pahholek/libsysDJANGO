@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST"> {% csrf_token %}
+    <input type="text" placeholder="Wpisz ISBN" name="ISBN">
+    <input type="submit" value="Wyszukaj">
+{% endblock %}

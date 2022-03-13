@@ -1,3 +1,4 @@
+from symtable import Class
 from django import forms
 import datetime
 from .models import book

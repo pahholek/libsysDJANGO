@@ -2,11 +2,15 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'form.css' %}">
-<form method='POST'>{% csrf_token %}
+<form method='POST'>
     <div class="form-container">
         {{ form }}
         <input type="submit" value="Save" class="submit" />
+        <a href="/" class="karo-button">
+            <input type="button" value="Importuj z KaRo" name="ISBN">
+        </a>
     </div>
 </form>
 
+<button value="Importuj z KaRo">
 {% endblock %}
